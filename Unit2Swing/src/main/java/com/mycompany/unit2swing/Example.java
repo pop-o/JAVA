@@ -70,6 +70,7 @@ class Eg extends JFrame{
             }
 
         });
+        //self added
         b3.addActionListener(new ActionListener(){
            @Override
            public void actionPerformed(ActionEvent e){
