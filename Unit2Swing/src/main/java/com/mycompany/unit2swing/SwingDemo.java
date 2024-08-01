@@ -105,7 +105,7 @@ class Forms extends JFrame implements ActionListener{
                 if(c3.isSelected()){
                     course+=c3.getText();
                 }
-                //combobox
+                //combobox here
                 String country="";
                 if(cb1.getSelectedItem()!=null){
                     country=(String)cb1.getSelectedItem();
