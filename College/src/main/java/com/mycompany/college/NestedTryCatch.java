@@ -7,7 +7,7 @@ public class NestedTryCatch {
     public static void main(String[] args) {
         try {
             
-            //inner try catch
+            //inner try catch here
             try {
                 Scanner scan=new Scanner(System.in);
                 System.out.println("Enter two numbers:");
