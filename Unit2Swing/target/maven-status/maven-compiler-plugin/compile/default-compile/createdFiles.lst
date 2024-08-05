@@ -5,6 +5,7 @@ com\mycompany\unit2swing\Eg$2.class
 com\mycompany\unit2swing\SwingDemo.class
 com\mycompany\unit2swing\GridL.class
 com\mycompany\unit2swing\MenuDemo.class
+com\mycompany\unit2swing\Cards.class
 com\mycompany\unit2swing\GridLayoutDemo.class
 com\mycompany\unit2swing\GridBagLayoutDemo.class
 com\mycompany\unit2swing\Eg$3.class
@@ -16,5 +17,7 @@ com\mycompany\unit2swing\Borders$4.class
 com\mycompany\unit2swing\Forms.class
 com\mycompany\unit2swing\Borders$2.class
 com\mycompany\unit2swing\GridBagg.class
+com\mycompany\unit2swing\Cards$1.class
 com\mycompany\unit2swing\Menus.class
+com\mycompany\unit2swing\CardLayoutDemo.class
 com\mycompany\unit2swing\Eg$1.class
