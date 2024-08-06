@@ -7,17 +7,21 @@ package com.mycompany.unit2swing;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import javax.swing.event.*;
 
 
 /**
 1. splitPane: divide the content into two part with slider in middle to create split pane object of JSplitPane is created
-2. JTable: show the data in form if row and column to create table its object is created and parameter accepting data and column of table
+2. JTable: show the data in form if row and column to create table its object is created and parameter accepting data and column of table\
+3. JList: same as combo box bit it shows item directly .create object of JList and pass array of item as parameter , to create scroll bar, add scrollpane
  */
 class OtherEg extends JFrame{
     JTextField t1;
     JComboBox cb1;
     JSplitPane sp1;
     JTable tb1;
+    
     public void setOther(){
         t1=new JTextField(20);
         String[] data={"java","c","c++"};
@@ -49,48 +53,35 @@ class OtherEg extends JFrame{
                 ,{"4","Pom","bba"}
                 ,{"5","emop","iST"}
                 ,{"6","meop","CIST"}
-                ,{"2","Poem","CIST"}
-                ,{"3","Popo","BCA"}
-                ,{"4","Pom","bba"}
-                ,{"5","emop","iST"}
-                ,{"6","meop","CIST"}
-                ,{"2","Poem","CIST"}
-                ,{"3","Popo","BCA"}
-                ,{"4","Pom","bba"}
-                ,{"5","emop","iST"}
-                ,{"6","meop","CIST"}
-                ,{"2","Poem","CIST"}
-                ,{"3","Popo","BCA"}
-                ,{"4","Pom","bba"}
-                ,{"5","emop","iST"}
-                ,{"6","meop","CIST"}
-                ,{"2","Poem","CIST"}
-                ,{"3","Popo","BCA"}
-                ,{"4","Pom","bba"}
-                ,{"5","emop","iST"}
-                ,{"6","meop","CIST"}
-                ,{"2","Poem","CIST"}
-                ,{"3","Popo","BCA"}
-                ,{"4","Pom","bba"}
-                ,{"5","emop","iST"}
-                ,{"6","meop","CIST"}
-                ,{"2","Poem","CIST"}
-                ,{"3","Popo","BCA"}
-                ,{"4","Pom","bba"}
-                ,{"5","emop","iST"}
-                ,{"6","meop","CIST"}
-                ,{"2","Poem","CIST"}
-                ,{"3","Popo","BCA"}
-                ,{"4","Pom","bba"}
-                ,{"5","emop","iST"}
-                ,{"6","meop","CIST"}
-        };
+                };
         //creating table
         tb1=new JTable(data1,col);
         tb1.setPreferredScrollableViewportSize(new Dimension(100,100));
         //adding scrollbar in table
         JScrollPane sp=new JScrollPane(tb1);
         add(sp); // adding scrollbar to window
+        String[] items={"bim","csit","bba","bpt","bca","cdsfsit","bbsdfa","bpsdhrt","bcasasdfa"};
+        JList ls1=new JList(items);
+        JScrollPane sp1=new JScrollPane(ls1);
+        add(sp1);
+        JTextField tf1=new JTextField(20);
+        //when item in list is clicked it will generate listselection event
+        ls1.setSelectionMode(2);//multi select
+        ls1.addListSelectionListener(new ListSelectionListener(){
+            @Override
+            public void valueChanged(ListSelectionEvent l) {
+                //extracting selected value
+                ArrayList<String> ar1=(ArrayList)ls1.getSelectedValuesList();
+                //displaying the data
+                String ans="You selected: ";
+                for(String data:ar1){
+                    ans+=data + " ";
+                }
+                tf1.setText(ans);
+            }
+            
+        });
+        add(tf1);
         setVisible(true);
         setDefaultCloseOperation(3);
         setLayout(new FlowLayout());
