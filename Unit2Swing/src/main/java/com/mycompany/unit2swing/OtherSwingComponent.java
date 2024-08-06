@@ -21,8 +21,8 @@ class OtherEg extends JFrame{
     JComboBox cb1;
     JSplitPane sp1;
     JTable tb1;
-    
-    public void setOther(){
+    JButton color,color2,dial,pop;
+     public void setOther(){
         t1=new JTextField(20);
         String[] data={"java","c","c++"};
         cb1=new JComboBox(data);
@@ -65,6 +65,7 @@ class OtherEg extends JFrame{
         JScrollPane sp1=new JScrollPane(ls1);
         add(sp1);
         JTextField tf1=new JTextField(20);
+        JTextField tf2=new JTextField(20);
         //when item in list is clicked it will generate listselection event
         ls1.setSelectionMode(2);//multi select
         ls1.addListSelectionListener(new ListSelectionListener(){
@@ -82,6 +83,110 @@ class OtherEg extends JFrame{
             
         });
         add(tf1);
+        color=new JButton("Color Chooser Button");
+        color2=new JButton("Color Chooser Button");
+        color.addActionListener(new ActionListener(){
+           @Override
+           public void actionPerformed(ActionEvent e){
+               JColorChooser cc=new JColorChooser();
+               Color color=JColorChooser.showDialog(null, "Choose a color", Color.yellow);
+               tf1.setBackground(color);
+           }
+        });
+        
+        
+        add(color);
+        dial=new JButton("open dialog box");
+        dial.addActionListener(new ActionListener(){
+           @Override
+           public void actionPerformed(ActionEvent e){
+               JDialog dia=new JDialog();
+               dia.add(tf2);
+               dia.add(color2);
+               dia.setLayout(new GridLayout(2,1));
+               dia.setVisible(true);
+               dia.setSize(400,400);
+               dia.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+               
+           }
+        });
+        
+        add(dial);
+        pop=new JButton("Popup");
+        pop.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                JPopupMenu mm=new JPopupMenu("Popup menu");
+                JLabel label=new JLabel("hello");
+                mm.add(label);
+                
+                JMenuItem m1=new JMenuItem("item1");
+                m1.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e){
+                        tf1.setText("Item1 clicked");
+                    }
+                });
+                JMenuItem m2=new JMenuItem("item2");
+                m2.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e){
+                        tf1.setText("Second item clicked");
+                    }
+                });
+                JMenuItem m3=new JMenuItem("item3");
+                m3.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e){
+                        tf1.setText("Clicked Item Third");
+                    }
+                });
+                mm.add(m1);
+                mm.add(m2);
+                mm.add(m3);
+                mm.show(null,pop.getX(),pop.getY());
+                
+                
+            }
+        });
+        
+//        this.addMouseListener(new MouseAdapter(){
+//            @Override
+//            public void mouseClicked(MouseEvent e) {
+//                 JPopupMenu mm=new JPopupMenu("Popup menu");
+////                JLabel label=new JLabel("hello");
+////                mm.add(label);
+//                
+//                JMenuItem m1=new JMenuItem("item1");
+//                m1.addActionListener(new ActionListener(){
+//                    @Override
+//                    public void actionPerformed(ActionEvent e){
+//                        tf1.setText("Item1 clicked");
+//                    }
+//                });
+//                JMenuItem m2=new JMenuItem("item2");
+//                m2.addActionListener(new ActionListener(){
+//                    @Override
+//                    public void actionPerformed(ActionEvent e){
+//                        tf1.setText("Second item clicked");
+//                    }
+//                });
+//                JMenuItem m3=new JMenuItem("item3");
+//                m3.addActionListener(new ActionListener(){
+//                    @Override
+//                    public void actionPerformed(ActionEvent e){
+//                        tf1.setText("Clicked Item Third");
+//                    }
+//                });
+//                mm.add(m1);
+//                mm.add(m2);
+//                mm.add(m3);
+//                mm.show(null,e.getX(),e.getY());
+//            }
+//
+//            
+//        });
+        add(pop);
         setVisible(true);
         setDefaultCloseOperation(3);
         setLayout(new FlowLayout());
@@ -94,5 +199,12 @@ public class OtherSwingComponent {
     public static void main(String[] args) {
         OtherEg other=new OtherEg();
         other.setOther();
+        
     }
 }
+
+/*
+Dialog box
+Popupmenu
+ColorChooser
+*/
