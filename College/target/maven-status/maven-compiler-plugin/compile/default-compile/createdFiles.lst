@@ -26,10 +26,12 @@ Unit2Swing\Forms.class
 Unit1Basics\ExceptionHandling.class
 Unit2Swing\OtherEg$2.class
 Unit1Basics\Consumer.class
+Unit3Events\WindowEventDemo.class
 Unit1Basics\SerializeDemo.class
 Unit1Basics\ThreadClassDemo.class
 Unit2Swing\Borders$2.class
 Unit2Swing\OtherEg.class
+Unit3Events\WindowDemo.class
 Unit1Basics\AgeError.class
 Unit2Swing\Eg$3.class
 Unit1Basics\Calculate3.class
@@ -39,6 +41,7 @@ Unit1Basics\NestedTryCatch.class
 Unit2Swing\Cards.class
 Unit2Swing\Example.class
 Unit2Swing\Borders$1.class
+Unit3Events\WindowDemo$1.class
 Unit2Swing\OtherEg$1.class
 Unit1Basics\CustomException.class
 Unit2Swing\Eg$2.class
