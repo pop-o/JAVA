@@ -26,7 +26,9 @@ class WindowDemo{
                 f1.dispose();
             }
         });
-        
+        f1.setLayout(new FlowLayout());
+        b1.setBounds(100, 100, 100, 100);
+        f1.add(b1);
         //handling event on frame
         f1.addWindowListener(new WindowListener(){
             @Override
