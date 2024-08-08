@@ -10,6 +10,7 @@ Unit2Swing\Eg$1.class
 Unit2Swing\OtherEg$4.class
 Unit2Swing\OtherEg$4$3.class
 Unit2Swing\OtherEg$3.class
+Unit3Events\Focuses$1.class
 Unit1Basics\CutomExceptionEg.class
 Unit2Swing\OtherSwingComponent.class
 Unit1Basics\Box.class
@@ -21,6 +22,7 @@ Unit2Swing\SwingDemo.class
 Unit1Basics\ThreadDemo.class
 Unit2Swing\Borders$3.class
 Unit1Basics\SharedResource.class
+Unit3Events\Focuses.class
 Unit1Basics\Calculate1.class
 Unit2Swing\Forms.class
 Unit1Basics\ExceptionHandling.class
@@ -50,6 +52,7 @@ Unit3Events\Keys$1.class
 com\Badu.class
 Unit1Basics\FileHandlingDemo.class
 Unit2Swing\GridLayoutDemo.class
+Unit3Events\FocusEventDemo.class
 Unit2Swing\Borders$4.class
 Unit1Basics\RunnableDemo.class
 Unit2Swing\Cards$1.class
