@@ -16,6 +16,8 @@ Unit2Swing\OtherSwingComponent.class
 Unit1Basics\Box.class
 Unit1Basics\CharacterStreamDemo.class
 Unit3Events\MouseEventDemo.class
+Unit3Events\WindowAd$1.class
+Unit3Events\WindowAd.class
 Unit2Swing\GridBagg.class
 Unit1Basics\College.class
 Unit3Events\MouseExtra$2.class
@@ -35,6 +37,7 @@ Unit1Basics\SerializeDemo.class
 Unit1Basics\ThreadClassDemo.class
 Unit2Swing\Borders$2.class
 Unit2Swing\OtherEg.class
+Unit3Events\WindowaAdapterDemo.class
 Unit3Events\WindowDemo.class
 Unit1Basics\AgeError.class
 Unit2Swing\Eg$3.class
