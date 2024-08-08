@@ -18,6 +18,7 @@ Unit1Basics\CharacterStreamDemo.class
 Unit3Events\MouseEventDemo.class
 Unit2Swing\GridBagg.class
 Unit1Basics\College.class
+Unit3Events\MouseExtra$2.class
 Unit2Swing\SwingDemo.class
 Unit1Basics\ThreadDemo.class
 Unit2Swing\Borders$3.class
@@ -38,6 +39,7 @@ Unit3Events\WindowDemo.class
 Unit1Basics\AgeError.class
 Unit2Swing\Eg$3.class
 Unit1Basics\Calculate3.class
+Unit3Events\MouseExtra$1.class
 Unit3Events\Mouse.class
 Unit2Swing\OtherEg$4$1.class
 Unit1Basics\NestedTryCatch.class
@@ -45,7 +47,9 @@ Unit2Swing\Cards.class
 Unit2Swing\Example.class
 Unit2Swing\Borders$1.class
 Unit3Events\WindowDemo$1.class
+Unit3Events\MouseMotionAndWheelDemo.class
 Unit2Swing\OtherEg$1.class
+Unit3Events\MouseExtra.class
 Unit1Basics\CustomException.class
 Unit2Swing\Eg$2.class
 Unit3Events\Keys$1.class
