@@ -30,12 +30,12 @@ class MouseExtra extends JFrame{
         t1.addMouseMotionListener(new MouseMotionListener(){
             @Override
             public void mouseMoved(MouseEvent e){
-                l1.setText("mouse moved");
+                l1.setText("mouse moved"+e.getX()+" "+e.getY());
             }
 
             @Override
             public void mouseDragged(MouseEvent e) {
-                l1.setText("mouse Dragged");
+                l1.setText("mouse Dragged"+e.getX()+" "+e.getY());
             }
             
             
@@ -46,7 +46,7 @@ class MouseExtra extends JFrame{
         t1.addMouseWheelListener(new MouseWheelListener(){
             @Override
             public void mouseWheelMoved(MouseWheelEvent e) {
-                l1.setText("mouse wheel moved");
+                l1.setText("mouse wheel moved"+e.getX()+" "+e.getY());
             }
             
         });
