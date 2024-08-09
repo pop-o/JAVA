@@ -21,6 +21,13 @@ public class JDBCDemo {
         //step 1: initialize druver (jarfile)
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
+            //step 2: connect with database
+            String url="jdbc:mysql://localhost:3306/";
+                    // protocol      server:port    database
+                    String suname="root";
+                    String spass="";
+                    
+            Connection conn=DriverManager.getConnection(url,suname,spass);
         }catch(ClassNotFoundException c){
             //throw if driver not found
             System.out.println(c);
