@@ -11,6 +11,10 @@ step to connect with database
 * 4. Write appropriate query
 * 5. execute query
 * 6. close connection
+* for insert update delete -> execute ()=>returns true or false | executeUodate() => return 1,0
+* for select -> executeQuery
+* 
+* 
 * 
 */
 
@@ -22,12 +26,41 @@ public class JDBCDemo {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             //step 2: connect with database
-            String url="jdbc:mysql://localhost:3306/";
+            String url="jdbc:mysql://localhost:3306/primecsitb";
                     // protocol      server:port    database
                     String suname="root";
                     String spass="";
                     
             Connection conn=DriverManager.getConnection(url,suname,spass);
+            if(conn!=null){
+                System.out.println("Database COnnection successfull");
+            }else{
+                System.out.println("Database Not connected");
+            }
+/*            //creating table: tbl_reg
+            String tblQuery="create table tbl_reg ("
+                    + "id int,username varchar(50),"
+                    + "password varchar(50),"
+                    + "repassword varchar(50),"
+                    + "gender varchar(50),"
+                    + "course varchar(50),"
+                    + "country varchar(50) )";
+            //execute query: Statement object is used
+            Statement st=conn.createStatement();
+            st.execute(tblQuery);
+            System.out.println("Table created");
+            conn.close();
+*/
+            //inserting data int database
+            System.out.println("--------Inserting data into db--------------");
+            String insQuery="insert into tbl_reg values(1,'poem','abcd','abcd','male','csit','nepal')";
+            Statement st=conn.createStatement();
+            int res=st.executeUpdate(insQuery);
+            if(res>0){
+                
+            System.out.println(res+" data inserted into table");
+            }
+            conn.close();
         }catch(ClassNotFoundException c){
             //throw if driver not found
             System.out.println(c);
