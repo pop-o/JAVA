@@ -1,0 +1,6 @@
+Username is: 12
+Password is: jlh
+Repass is: jk
+Gender is: Male
+Course is: C++
+COuntry is: Nepal
