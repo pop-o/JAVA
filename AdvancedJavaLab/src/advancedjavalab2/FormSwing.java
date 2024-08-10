@@ -92,7 +92,7 @@ class Form extends JFrame{
     }
     
 }
-public class AdvancedJavaLab {
+public class FormSwing {
     public static void main(String[] args) {
         Form form=new Form();
         form.setForms();
