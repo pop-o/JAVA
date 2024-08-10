@@ -1,4 +1,4 @@
-package advancedjavalab;
+package advancedjavalab2;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
