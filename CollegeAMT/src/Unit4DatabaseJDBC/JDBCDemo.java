@@ -51,7 +51,7 @@ public class JDBCDemo {
             System.out.println("Table created");
             conn.close();
 */
-
+/*
             //inserting data int database
             System.out.println("--------Inserting data into db--------------");
             String insQuery="insert into tbl_reg values(1,'poem','abcd','abcd','male','csit','nepal')";
@@ -62,14 +62,32 @@ public class JDBCDemo {
             System.out.println(res+" data inserted into table");
             }
             conn.close();
-
-/*            //fetching data from database
+*/
+          //fetching data from database
             System.out.println("-----------fetching data from database---------------");
             String fetchQuery="select * from tbl_reg";
             Statement st=conn.createStatement();
+            //to fetch data excuteQuery is used which return object ResultSet
+            ResultSet rs=st.executeQuery(fetchQuery);
+            while(rs.next()){
+                //to fetch data
+                int id=rs.getInt("id");
+                String uname=rs.getString("username");
+                String pass=rs.getString("password");
+                String repass=rs.getString("repassword");
+                String gender=rs.getString("gender");
+                String course=rs.getString("course");
+                String country=rs.getString("country");
+                System.out.println("id is: "+id+"\nUsername is: "+uname
+                        +"\nPassword is: "+pass+
+                        "\nRepassword is: "+repass+
+                        "\nGender is: "+gender+
+                        "\nCOurse is: "+course+
+                        "\ncountry is: "+country);
+            }
             
-            st.executeQuery(fetchQuery);
-  */          
+            
+           
 
         }catch(ClassNotFoundException c){
             //throw if driver not found
