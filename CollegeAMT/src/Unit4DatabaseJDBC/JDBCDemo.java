@@ -37,9 +37,9 @@ public class JDBCDemo {
             }else{
                 System.out.println("Database Not connected");
             }
-/*            //creating table: tbl_reg
+  /*         //creating table: tbl_reg
             String tblQuery="create table tbl_reg ("
-                    + "id int,username varchar(50),"
+                    + "id int primary key,username varchar(50),"
                     + "password varchar(50),"
                     + "repassword varchar(50),"
                     + "gender varchar(50),"
@@ -51,6 +51,7 @@ public class JDBCDemo {
             System.out.println("Table created");
             conn.close();
 */
+
             //inserting data int database
             System.out.println("--------Inserting data into db--------------");
             String insQuery="insert into tbl_reg values(1,'poem','abcd','abcd','male','csit','nepal')";
@@ -61,6 +62,15 @@ public class JDBCDemo {
             System.out.println(res+" data inserted into table");
             }
             conn.close();
+
+/*            //fetching data from database
+            System.out.println("-----------fetching data from database---------------");
+            String fetchQuery="select * from tbl_reg";
+            Statement st=conn.createStatement();
+            
+            st.executeQuery(fetchQuery);
+  */          
+
         }catch(ClassNotFoundException c){
             //throw if driver not found
             System.out.println(c);
