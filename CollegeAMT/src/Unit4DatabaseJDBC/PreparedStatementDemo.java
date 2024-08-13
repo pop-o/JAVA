@@ -134,13 +134,45 @@ class PreparedEg{
             System.out.println(e);
         }
     }
+    
+    //deleting data from database
+    public void delData(){
+        //delete record of peroson whose id is given by user
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url="jdbc:mysql://localhost:3306/primecsitb";
+            String susername="root";
+            String spassword="";
+            conn=DriverManager.getConnection(url,susername,spassword);
+            //update course to ? and country to ? for person whose id is 1
+            
+            Scanner sc1=new Scanner(System.in);
+            System.out.println("Enter id of person whose record is to be deleted: ");
+            String did=sc1.next();
+            
+            String delQuery="delete from tbl_reg where id=?";
+            PreparedStatement ps1=conn.prepareStatement(delQuery);
+            ps1.setString(1,did);
+            int res2=ps1.executeUpdate();
+            if(res2>0){
+                System.out.println(res2+" data deleted");
+            }
+            conn.close();
+        }catch(ClassNotFoundException c){
+            System.out.println(c);
+        }catch(SQLException e){
+            System.out.println(e);
+        }
+    }
 }
 public class PreparedStatementDemo {
     public static void main(String[] args) {
         PreparedEg p=new PreparedEg();
 //        p.insertData();
-        p.fetchData();
-         p.updateData();
-         p.fetchData();
+//        p.fetchData();
+//         p.updateData();
+//         p.fetchData();
+        p.delData();
+        
     }
 }
