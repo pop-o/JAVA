@@ -112,60 +112,46 @@ class Forms extends JFrame implements ActionListener{
     }
 }
 class LoginForm extends JFrame implements ActionListener {
-
     JLabel l1, l2, l3;
     JTextField t1;
     JPasswordField p1;
     JButton b1;
-
     public LoginForm() {
         l1 = new JLabel("Username");
         l2 = new JLabel("Password");
         l3 = new JLabel("Result");
-
         t1 = new JTextField(20);
         p1 = new JPasswordField(20);
         b1 = new JButton("Login");
-
         setLayout(new FlowLayout());
         add(l1); add(t1);
         add(l2); add(p1);
         add(b1); add(l3);
-
         setVisible(true);
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         b1.addActionListener(this);
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         String uname = t1.getText();
         String pass = String.valueOf(p1.getPassword());
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/primecsitb";
             String suname = "root";
             String spass = "";
             Connection conn = DriverManager.getConnection(url, suname, spass);
-
-            // Fetch the user based on the provided username and password
             String query = "SELECT * FROM tbl_reg WHERE username = ? AND password = ?";
             PreparedStatement ps = conn.prepareStatement(query, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             ps.setString(1, uname);
             ps.setString(2, pass);
-
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 l3.setText("Login successful!");
-
-                // Perform updates
                 rs.beforeFirst(); // Position before the first row
                 while (rs.next()) {
                     int id = rs.getInt("id");
-
                     if (id == 3) {
                         rs.updateString("username", "sanu");
                         rs.updateString("course", "BCA");
@@ -175,8 +161,6 @@ class LoginForm extends JFrame implements ActionListener {
                         rs.updateRow();  // Commit the update to the database
                     }
                 }
-
-                // Perform deletions
                 rs.beforeFirst(); // Position before the first row
                 while (rs.next()) {
                     String name = rs.getString("username");
@@ -184,33 +168,25 @@ class LoginForm extends JFrame implements ActionListener {
                         rs.deleteRow();  // Delete the row from the database
                     }
                 }
-
-                // Display the updated table records
                 displayTableRecords(conn);
-
             } else {
                 l3.setText("Invalid username or password");
             }
-
             conn.close();
         } catch (SQLException | ClassNotFoundException ex) {
             l3.setText("Database error: " + ex.getMessage());
         }
     }
-
     private void displayTableRecords(Connection conn) {
         JFrame frame = new JFrame("Table Records");
         frame.setSize(600, 400);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
         String[] columnNames = {"ID", "Username", "Password", "Gender", "Course", "Country"};
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
-
         try {
             String query = "SELECT * FROM tbl_reg";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-
             while (rs.next()) {
                 String id = rs.getString("id");
                 String username = rs.getString("username");
@@ -218,27 +194,20 @@ class LoginForm extends JFrame implements ActionListener {
                 String gender = rs.getString("gender");
                 String course = rs.getString("course");
                 String country = rs.getString("country");
-
                 model.addRow(new Object[]{id, username, password, gender, course, country});
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         JTable table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
         frame.add(scrollPane);
-
         frame.setVisible(true);
     }
 }
 public class SwingForm {
     public static void main(String[] args) {
-        // Open the form to register a user
         Forms form = new Forms();
-        
-        // Open the login form after registration
-        // Uncomment this line to open the login form
          LoginForm login = new LoginForm();
     }
 }
