@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form method="post" action="Fservlet">
+                
+                <label>Username</label>
+                <input type="text" name="uname"/></br>
+                <label>Password</label>
+                <input type="password" name="pass"/></br>
+                <label>Repassword</label>
+                <input type="password" name="repass"/></br>
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male"/>
+                <input type="radio" name="gender" value="female"/></br>
+                <label>Course</label>
+                <input type="checkbox" name="cr" value="java">Java
+                <input type="checkbox" name="cr" value="c++">c++
+                <input type="checkbox" name="cr" value="c">c</br>
+                <label>country</label>
+                <select name="con">
+                    <option value="-1">Select Country</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="usa">USA</option>
+                    <option value="japan">Japan</option>
+                </select></br>
+                <input type="submit" name="submit" value="submit"/>
+                
+                
+            </form>
+        </div>
+    </body>
+</html>
