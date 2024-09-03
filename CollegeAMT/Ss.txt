@@ -1,0 +1,6 @@
+Username is: 
+Password is: 
+Repass is: 
+Gender is: Female
+Course is: 
+COuntry is: Nepal

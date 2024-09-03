@@ -13,4 +13,22 @@
         <servlet-name>First</servlet-name>
         <url-pattern>/fsts</url-pattern>
     </servlet-mapping>
+    <!--mapping Fservlet-->
+    <servlet>
+        <servlet-name>frm</servlet-name>
+        <servlet-class>TomCSITB.Fservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>frm</servlet-name>
+        <url-pattern>/Fservlet</url-pattern>
+    </servlet-mapping>
+    <!--mapping Lservlet-->
+    <servlet>
+        <servlet-name>lgn</servlet-name>
+        <servlet-class>TomCSITB.Lservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>lgn</servlet-name>
+        <url-pattern>/Lservlet</url-pattern>
+    </servlet-mapping>
 </web-app>
