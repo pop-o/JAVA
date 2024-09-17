@@ -14,8 +14,7 @@ b. FileReader: to read from file using character stream
 
 */
 import java.io.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 public class FileHandlingDemo {
     public static void main(String[] args) {
             try {

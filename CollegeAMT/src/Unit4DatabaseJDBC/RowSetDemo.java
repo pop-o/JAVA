@@ -25,7 +25,7 @@ public class RowSetDemo {
         jrs.execute();
             System.out.println("=====fetch 2nd row data==");
             jrs.absolute(2);
-             System.out.println("id is: "+jrs.getString("id"));
+            System.out.println("id is: "+jrs.getString("id"));
             System.out.println("username is: "+jrs.getString("username"));
         }catch(ClassNotFoundException e){
             System.out.println(e);

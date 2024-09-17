@@ -24,7 +24,7 @@
             out.println("Hello world!");
             }
         %>
-        <form method="post" action="Fservlet">
+        <form method="post">
                 
                 <label>Id</label>
                 <input type="text" name="id"/></br>

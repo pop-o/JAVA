@@ -18,7 +18,7 @@ public class ScrollLabelandUpdatableDemo {
                     
             Connection conn=DriverManager.getConnection(url,suname,spass);
             String disQuery ="select * from tbl_reg";
-            //creating scrolllavel and updatetable result set
+            //creating scrolllabel and updatetable result set
             int scroll=ResultSet.TYPE_SCROLL_SENSITIVE;
             //to create updatable: to do update operation
             int updatable=ResultSet.CONCUR_UPDATABLE;
