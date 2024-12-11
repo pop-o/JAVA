@@ -22,7 +22,7 @@ import java.rmi.*;
 import java.rmi.registry.*;
 import java.rmi.server.*;
 public class CsitBServer extends UnicastRemoteObject implements ServiceProvider{
-    //it throws temote excpetion
+    //it throws remote excpetion
     public CsitBServer() throws RemoteException{}
     
     @Override

@@ -32,7 +32,7 @@ public class Fservlet extends HttpServlet{
         //displat from values
         res.setContentType("text/html");
         PrintWriter pw=res.getWriter();
-        pw.println("<h2>uname is: "+uname+"pass is: "+ pass+"re pass is: "+repass+"gender is: "+gender+"course is: "+course+"country is: "+country);
+        pw.println("<h2>uname is: "+uname+" pass is: "+ pass+" re pass is: "+repass+" gender is: "+gender+"course is: "+crc+" country is: "+country);
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");

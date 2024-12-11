@@ -34,23 +34,23 @@ public class FxLayoutDemo extends Application{
         
         //layout 
         //FlowPane: places the comp from ledt ro right
-//        FlowPane fp=new FlowPane();
-//        fp.setHgap(20);
-//        fp.setVgap(20);
-//        fp.getChildren().add(b1);
-//        fp.getChildren().add(b2);
-//        fp.getChildren().add(b3);
-//        fp.getChildren().add(b4);
-//        fp.getChildren().add(l1);
+        FlowPane fp=new FlowPane();
+        fp.setHgap(20);
+        fp.setVgap(20);
+        fp.getChildren().add(b1);
+        fp.getChildren().add(b2);
+        fp.getChildren().add(b3);
+        fp.getChildren().add(b4);
+        fp.getChildren().add(l1);
 //        
         //gridpane places the comp in form of row and columns
-//        GridPane gp=new GridPane();
-//        gp.add(b1,0,0);
-//        gp.add(b2,0,1);
-//        gp.add(b3,1,0);
-//        gp.add(b4,1,1);
-//        gp.add(l1,1,2);
-//        
+        GridPane gp=new GridPane();
+        gp.add(b1,0,0);
+        gp.add(b2,0,1);
+        gp.add(b3,1,0);
+        gp.add(b4,1,1);
+        gp.add(l1,1,2);
+        
         //Borderpane: places com in direction
         BorderPane bp=new BorderPane();
         bp.setCenter(l1);
@@ -60,20 +60,20 @@ public class FxLayoutDemo extends Application{
         bp.setLeft(b4);
 //        
         //HBox: places the compoinent horizontally
-//        HBox hb=new HBox();
-//        hb.getChildren().addAll(b1,b2,b3,b4,l1);
+        HBox hb=new HBox();
+        hb.getChildren().addAll(b1,b2,b3,b4,l1);
         
         //VBox: places the compoinent horizontally
-//        VBox vb=new VBox();
-//        vb.getChildren().addAll(b1,b2,b3,b4,l1);
+        VBox vb=new VBox();
+        vb.getChildren().addAll(b1,b2,b3,b4,l1);
 //        
 //        add layout into scene
-//        Scene sc=new Scene(fp,200,200);
-//        Scene sc=new Scene(gp,200,200);
-        Scene sc=new Scene(bp,200,200);
-//        Scene sc=new Scene(hb,500,500);
-//        Scene sc=new Scene(vb,500,500);
-        //add scene into stage
+        Scene sc=new Scene(fp,200,200);
+        Scene sc1=new Scene(gp,200,200);
+        Scene sc2=new Scene(bp,200,200);
+        Scene sc3=new Scene(hb,500,500);
+        Scene sc4=new Scene(vb,500,500);
+//        add scene into stage
         stage.setTitle("layout example");
         stage.setScene(sc);
         stage.show();
